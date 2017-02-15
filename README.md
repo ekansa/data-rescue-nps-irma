@@ -32,4 +32,3 @@ The data.zip file contains the compressed results of the scapper.py code. It has
       
 
 
-data.zip
