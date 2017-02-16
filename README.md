@@ -3,7 +3,7 @@ README
 
 
 
-Data Rescue: Metadata and File Manifests for the United States National Parks Service (NPS) IRMA Database
+Data Rescue: Metadata and File Manifests for the United States National Park Service (NPS) IRMA Database
 ---------------------------------------------------------------------------------------------------------
 The IRMA database is a publicly accessible repository of "items" published by the National Park Service (NPS). Each IRMA item has some metadata (especially title, description, suggested citation), and a manifest that provides metadata and URLs to download files. The files associated with IRMA items vary in format (many PDFs, but also XLS, various types of GIS files, and more). Many of the files have URLs belonging to IRMA itself, but some are URLs to resources elsewhere on the Web. In some causes the URLs to non-IRMA resources point to Web pages.
 
