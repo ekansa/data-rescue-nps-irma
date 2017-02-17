@@ -15,7 +15,7 @@ scrapper.py
 -----------
 The scrapper.py file has the code used to:
 
-1. Search IRMA with keywords to identifiy content that maybe at risk. These keywords include: "climate", "data", "archaeology", "endangered", "oil gas", "contamination", "inholding", "enclave" and "tribal". Each keword search resulted in a paged JSON formated response from IRMA. The code iterates through the search responses to get identifiers for items that are publicly accessible. The code also de-duplicates the results of these multiple searches.
+1. Search IRMA with keywords to identifiy content that maybe at risk. These keywords include: "climate", "data", "archaeology", "endangered", "oil gas", "contamination", "inholding", "enclave" and "tribal". Each keword search resulted in a paged JSON formated response from IRMA. The code iterates through the search responses to get identifiers for items that are publicly accessible. The code also de-duplicates the results of these multiple searches. In the compressed "data-2.zip" directory, we've included additional searh results for different groups of "published reports", "fire reports", and a park boundaries. 
 
 2. Create directories for each IRMA item. The directories are named with the numeric IRMA ID assigned to each item identified in the searches described above.
 
@@ -27,6 +27,11 @@ The scrapper.py file has the code used to:
 data.zip
 -----------
 The data.zip file contains the compressed results of the scapper.py code. It has 25,912 folders, one for each IRMA item identified with the keyword searches described above. Each IRMA item directory has a JSON formatted metadata profile file (named: "{id}-meta-profile.json"), and a JSON formatted file manifest (named: "{id}-files.json").
+
+
+data-2.zip
+-----------
+The data-2.zip file contains the compressed results of additional results from the scrapper.py code, updated to include listings of additional reports and park-boundaries (made at the request of an NPS employee). It has 451 folders, each for an IRMA item (not already in "data.zip"). Otherwise, it has the same type of profile metadata and file manifests as described above for "data.zip".   
 
 
       
