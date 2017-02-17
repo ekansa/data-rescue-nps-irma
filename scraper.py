@@ -85,6 +85,12 @@ def main(output_dir):
         'https://irma.nps.gov/DataStore/Search/QuickSearch?Text=enclave&Linked=false&page=1&start=0&limit=1000',
         # search term: 'tribal' 261 results
         'https://irma.nps.gov/DataStore/Search/QuickSearch?Text=tribal&Linked=false&page=1&start=0&limit=1000',
+        # reference search for 'published reports'
+        'https://irma.nps.gov/DataStore/Reference/GetRelatedReferencesData?Id=2007596&page=1&start=0&limit=1000',
+        # reference search for more 'published reports'
+        'https://irma.nps.gov/DataStore/Reference/GetRelatedReferencesData?Id=2007603&page=1&start=0&limit=1000',
+        # fire reports
+        'https://irma.nps.gov/DataStore/Reference/GetRelatedReferencesData?Id=2217505&page=1&start=0&limit=1000',
     ]
     item_ids = None
     item_ids_json_file = os.path.join(output_dir, 'item_ids.json')
@@ -92,7 +98,8 @@ def main(output_dir):
         # we already saved a list of the items we want to save
         item_ids = json.load(codecs.open(item_ids_json_file, 'r'))
     if item_ids is None:
-        item_ids = []  # ids of individual items we want to archive
+        if item_ids is None:
+            item_ids = []  # ids of individual items we want to archive
         for url in search_urls:
             # slight delay between requests
             time.sleep(.5)
